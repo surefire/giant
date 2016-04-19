@@ -1,0 +1,426 @@
+.portfolio-slice {
+  min-height: 300px;
+  margin-bottom: gutter();
+}
+
+.portfolio-slice-a1 {
+  background-color: $color-crimson;
+
+  @include span(full);
+}
+
+.portfolio-slice-a2 {
+  background-color: $color-firefly;
+
+  @include span(full);
+}
+
+.portfolio-slice-a3 {
+  background-color: $color-crimson;
+
+  @include span(full);
+}
+
+.portfolio-slice-a4 {
+  background-color: $color-crimson;
+
+  @include span(full);
+}
+
+.portfolio-slice-a5 {
+  background-color: $color-scooter;
+
+  @include span(full);
+}
+
+.portfolio-slice-b1 {
+  background-color: $color-firefly;
+
+  @include span(first 1);
+}
+
+.portfolio-slice-b2 {
+  background-color: $color-scooter;
+
+  @include span(first 1);
+}
+
+.portfolio-slice-b3 {
+  background-color: $color-firefly;
+
+  @include span(last 1);
+}
+
+.portfolio-slice-b4 {
+  background-color: $color-firefly;
+
+  @include span(last 1);
+}
+
+.portfolio-slice-b5 {
+  background-color: $color-crimson;
+
+  @include span(first 1);
+}
+
+.portfolio-slice-b6 {
+  background-color: $color-firefly;
+
+  @include span(last 1);
+}
+
+.portfolio-slice-c1 {
+  display: flex;
+  flex-direction: column;
+
+  $context: last 1;
+  @include span($context);
+
+  @include nested($context) {
+    .portfolio-item {
+      flex: 1;
+      background-color: $color-scooter;
+    }
+
+    .portfolio-item-a {
+      margin-bottom: gutter();
+    }
+  }
+}
+
+.portfolio-slice-c2 {
+  display: flex;
+  flex-direction: column;
+
+  $context: last 1;
+  @include span($context);
+
+  @include nested($context) {
+    .portfolio-item {
+      flex: 1;
+    }
+
+    .portfolio-item-a {
+      background-color: $color-firefly;
+      margin-bottom: gutter();
+    }
+
+    .portfolio-item-b {
+      background-color: $color-crimson;
+    }
+  }
+}
+
+.portfolio-slice-c3 {
+  display: flex;
+  flex-direction: column;
+
+  $context: first 1;
+  @include span($context);
+
+  @include nested($context) {
+    .portfolio-item {
+      flex: 1;
+    }
+
+    .portfolio-item-a {
+      background-color: $color-scooter;
+      margin-bottom: gutter();
+    }
+
+    .portfolio-item-b {
+      background-color: $color-firefly;
+    }
+  }
+}
+
+.portfolio-slice-c4 {
+  display: flex;
+  flex-direction: column;
+
+  $context: first 1;
+  @include span($context);
+
+  @include nested($context) {
+    .portfolio-item {
+      flex: 1;
+    }
+
+    .portfolio-item-a {
+      background-color: $color-scooter;
+      margin-bottom: gutter();
+    }
+
+    .portfolio-item-b {
+      background-color: $color-crimson;
+    }
+  }
+}
+
+@include medium {
+  .portfolio-slice {
+    margin-bottom: gutter();
+  }
+
+  .portfolio-slice-a1 {
+    @include span(first 2);
+  }
+
+  .portfolio-slice-a2 {
+    @include span(last 2);
+  }
+
+  .portfolio-slice-a3 {
+    @include span(first 2);
+  }
+
+  .portfolio-slice-a4 {
+    @include span(last 2);
+  }
+
+  .portfolio-slice-a5 {
+    @include span(first 2);
+  }
+
+  .portfolio-slice-b1 {
+    @include span(1);
+  }
+
+  .portfolio-slice-b2 {
+    @include span(first 1);
+  }
+
+  .portfolio-slice-b3 {
+    @include span(1);
+  }
+
+  .portfolio-slice-b4 {
+    @include span(last 1);
+  }
+
+  .portfolio-slice-b5 {
+    @include span(1);
+  }
+
+  .portfolio-slice-b6 {
+    @include span(last 1);
+  }
+
+  .portfolio-slice-c1 {
+    $context: last 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+
+  .portfolio-slice-c2 {
+    $context: 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+
+  .portfolio-slice-c3 {
+    @include span(first 1);
+  }
+
+  .portfolio-slice-c4 {
+    @include span(1);
+  }
+}
+
+@include wide {
+  .portfolio-slice {
+    margin-bottom: gutter();
+  }
+
+  .portfolio-slice-a1 {
+    @include span(first 2);
+  }
+
+  .portfolio-slice-a2 {
+    @include span(last 2);
+  }
+
+  .portfolio-slice-a3 {
+    @include span(first 2);
+  }
+
+  .portfolio-slice-a4 {
+    @include span(last 2);
+  }
+
+  .portfolio-slice-a5 {
+    @include span(first 2);
+  }
+
+  .portfolio-slice-b1 {
+    @include span(1);
+  }
+
+  .portfolio-slice-b2 {
+    @include span(first 1);
+  }
+
+  .portfolio-slice-b3 {
+    @include span(1);
+  }
+
+  .portfolio-slice-b4 {
+    @include span(last 1);
+  }
+
+  .portfolio-slice-b5 {
+    @include span(1);
+  }
+
+  .portfolio-slice-b6 {
+    @include span(last 1);
+  }
+
+  .portfolio-slice-c1 {
+    $context: last 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+
+  .portfolio-slice-c2 {
+    $context: 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+
+  .portfolio-slice-c3 {
+    $context: first 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+
+  .portfolio-slice-c4 {
+    $context: 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+}
+
+@include huge {
+  .portfolio-slice {
+    margin-bottom: gutter();
+  }
+
+  .portfolio-slice-a1 {
+    @include span(first 2);
+  }
+
+  .portfolio-slice-a2 {
+    @include span(2);
+  }
+
+  .portfolio-slice-a3 {
+    @include span(last 2);
+  }
+
+  .portfolio-slice-a4 {
+    @include span(first 2);
+  }
+
+  .portfolio-slice-a5 {
+    @include span(2);
+  }
+
+  .portfolio-slice-b1 {
+    @include span(1);
+  }
+
+  .portfolio-slice-b2 {
+    @include span(last 1);
+  }
+
+  .portfolio-slice-b3 {
+    @include span(1);
+  }
+
+  .portfolio-slice-b4 {
+    @include span(first 1);
+  }
+
+  .portfolio-slice-b5 {
+    @include span(1);
+  }
+
+  .portfolio-slice-b6 {
+    @include span(last 1);
+  }
+
+  .portfolio-slice-c1 {
+    $context: 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+
+  .portfolio-slice-c2 {
+    $context: first 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+
+  .portfolio-slice-c3 {
+    $context: 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+
+  .portfolio-slice-c4 {
+    $context: last 1;
+    @include span($context);
+
+    @include nested($context) {
+      .portfolio-item-a {
+        margin-bottom: gutter();
+      }
+    }
+  }
+}

@@ -2,8 +2,18 @@
 @import "bower_components/susy/sass/_susy.scss";
 // endbower
 
+@import "base/colors";
+@import "base/grid";
+
+@import "components/portfolio_slice";
+
+@import "layout/container";
+
+@include border-box-sizing;
+
 body {
-  background: #fafafa;
+  margin: 0;
+  padding: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }

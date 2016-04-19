@@ -1,0 +1,15 @@
+.container {
+  @include container($container-small);
+
+  @include medium {
+    @include container($container-medium);
+  }
+
+  @include wide {
+    @include container($container-wide);
+  }
+
+  @include huge {
+    @include container($container-huge);
+  }
+}
