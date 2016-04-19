@@ -2,10 +2,142 @@
 @import "bower_components/susy/sass/_susy.scss";
 // endbower
 
+$color-crimson: rgb(230, 17, 69);
+$color-firefly: rgb(8, 22, 35);
+$color-scooter: rgb(61, 189, 215);
+
+$breakpoint-small: 520px !default;
+$breakpoint-medium: 768px !default;
+$breakpoint-wide: 1024px !default;
+$breakpoint-huge: 1200px !default;
+
+$container-small: 520px !default;
+$container-medium: 860px !default;
+$container-wide: 1024px !default;
+$container-huge: 1200px !default;
+
+$grid-small: 2 !default;
+$grid-medium: 2 !default;
+$grid-wide: 4 !default;
+$grid-huge: 5 !default;
+
+$susy: (
+  gutter-position: inside,
+  columns: $grid-small,
+  gutters: 0,
+  global-box-sizing: border-box,
+  debug: (
+    image: show
+  ),
+  use-custom: (
+    box-sizing: false
+  ),
+);
+
+$susy-small: (
+  columns: $grid-small,
+);
+
+$susy-medium: (
+  columns: $grid-medium,
+);
+
+$susy-wide: (
+  columns: $grid-wide,
+);
+
+$susy-huge: (
+  columns: $grid-huge,
+);
+
+@mixin medium {
+  @include susy-breakpoint($breakpoint-medium, $susy-medium) {
+    @content
+  }
+}
+
+@mixin to-medium {
+  @include susy-breakpoint(0 ($breakpoint-medium - 1), $susy-small) {
+    @content
+  }
+}
+
+@mixin medium-only {
+  @include susy-breakpoint($breakpoint-medium ($breakpoint-wide - 1), $susy-medium) {
+    @content
+  }
+}
+
+@mixin wide {
+  @include susy-breakpoint($breakpoint-wide, $susy-wide) {
+    @content
+  }
+}
+
+@mixin to-wide {
+  @include susy-breakpoint(0 ($breakpoint-wide - 1), $susy-wide) {
+    @content
+  }
+}
+
+@mixin wide-only {
+  @include susy-breakpoint($breakpoint-wide ($breakpoint-huge - 1), $susy-wide) {
+    @content
+  }
+}
+
+@mixin huge {
+  @include susy-breakpoint($breakpoint-huge, $susy-huge) {
+    @content
+  }
+}
+
+@mixin to-huge {
+  @include susy-breakpoint(0 ($breakpoint-huge - 1), $susy-huge) {
+    @content
+  }
+}
+
+@mixin huge-only {
+  @include susy-breakpoint($breakpoint-huge ($breakpoint-huge - 1), $susy-huge) {
+    @content
+  }
+}
+
+@mixin all {
+  @content;
+
+  @include medium {
+    @content;
+  }
+
+  @include wide {
+    @content;
+  }
+
+  @include huge {
+    @content;
+  }
+}
+
 body {
   background: #fafafa;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
+
+  @include container($container-small);
+
+  @include medium {
+    @include container($container-medium);
+  }
+
+  @include wide {
+    @include container($container-wide);
+  }
+
+  @include huge {
+    @include container($container-huge);
+  }
 }
 
 .browserupgrade {
@@ -13,4 +145,41 @@ body {
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+h1 {
+  @include full;
+}
+
+.portfolio-item {
+  display: block;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item-group {
+  @include all {
+    @include span(1);
+  }
+}
+
+.portfolio-item--size-large {
+  background-color: $color-crimson;
+
+  @include all {
+    @include span(2);
+  }
+}
+
+.portfolio-item--size-medium {
+  background-color: $color-firefly;
+
+  @include all {
+    @include span(1);
+  }
+}
+
+.portfolio-item--size-small {
+  height: 145px;
+  background-color: $color-scooter;
 }
