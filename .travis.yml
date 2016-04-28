@@ -9,7 +9,7 @@ deploy:
   provider: releases
   api_key:
     secure: f2iPUwKBAj2Eo8PgJSBj5Q1C6EV5bwt/zQebIXIZjx4Ji53VjcejGS6igQUg9gCjk22VO+d2ZXqPpXw0Qfm0t9KsLvvTKJ+t/C2nsFLyjRi4+MJ+IAi0tqJoGYrK7jOd5vEg86oDc6wM5deEvRibrmq6/ocAARCSS6JMOhlNKYb2dRI5vq5prcJK8sGGddALILpJE5Um43PmdqzQ3I/NT4q9kvINmLjjFKmgAmzHVfqSSt4C+R8fA3nnr6zjEQxw0YJP7h5nxvqMUIfOPY1SSIETOVmiekiCbuXT7m2z4I9qZyfuD0acw5dgewrOjRIMNv/iUDUNPGN99mo2+uarDQXWydayPrB4Z/7vG6mw8OSZX5SWyMBr34FDx+pSMCiJuWXH53x0XIPp5Pp95BIAHfiS1QbBuaRLxPaX/I3+C2eSjcNyxBOFsoiUASeD6xPM+AEyy8L8Zvem0XiaTWl0Zus4Iq3MJlf4xgCBpfHsiKiaixGIkFr49PWt1HmIQae3xAC/vtnUsx6X7KhbNINnyCDRLgaiDO+RPYnoJ4jP6M9y+Ty7TaaBECRRlmPTOg/tVQAHoN+Ut007lS6kCTIeB6WSz22/VfD6smagpvRCM0ubkq3akT2q7ar4A+bckjqrFVXkfHnYGabKEyysdPlF0jFTpxvImKoGE/Gldt8UiR0=
-  file: dist
+  file: dist/**/*
   skip_cleanup: true
   on:
     repo: surefire/giant
