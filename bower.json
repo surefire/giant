@@ -4,6 +4,7 @@
   "dependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "susy": "^2.2.12"
   }
 }

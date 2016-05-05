@@ -1,0 +1,49 @@
+$base-line-height: 10px;
+
+$breakpoint-small: 520px !default;
+$breakpoint-medium: 768px !default;
+$breakpoint-wide: 1024px !default;
+$breakpoint-huge: 1200px !default;
+
+$container-small: 520px !default;
+$container-medium: 768px !default;
+$container-wide: 1024px !default;
+$container-huge: 1200px !default;
+
+$grid-small: 2 !default;
+$grid-medium: 4 !default;
+$grid-wide: 4 !default;
+$grid-huge: 5 !default;
+
+$layout-small: $container-small $grid-small;
+$layout-medium: $container-medium $grid-medium;
+$layout-wide: $container-wide $grid-wide;
+$layout-huge: $container-huge $grid-huge;
+
+$susy: (
+  math: fluid,
+  gutter-position: before,
+  columns: $grid-small,
+  gutters: .075,
+  debug: (
+    image: false
+  )
+);
+
+@mixin medium {
+  @include susy-breakpoint($breakpoint-medium, $layout-medium) {
+    @content
+  }
+}
+
+@mixin wide {
+  @include susy-breakpoint($breakpoint-wide, $layout-wide) {
+    @content
+  }
+}
+
+@mixin huge {
+  @include susy-breakpoint($breakpoint-huge, $layout-huge) {
+    @content
+  }
+}
