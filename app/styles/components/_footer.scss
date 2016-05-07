@@ -1,0 +1,21 @@
+.footer {
+  @include span(full);
+
+  margin-bottom: gutter();
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1em;
+  color: $color-san-juan;
+
+  @include medium {
+    text-align: left;
+  }
+
+  @include wide {
+    text-align: left;
+  }
+
+  @include huge {
+    text-align: left;
+  }
+}
