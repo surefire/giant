@@ -1,0 +1,31 @@
+.logo {
+  @include span(1);
+
+  @include medium {
+    @include span(1.5)
+  }
+
+  @include wide {
+    @include span(1.5);
+  }
+
+  @include huge {
+    @include span(1.5);
+  }
+}
+
+.logo--dot {
+  fill: $color-hoki;
+}
+
+.logo--mid {
+  fill: $color-atomic;
+}
+
+.logo--shadow {
+  fill: $color-elephant;
+}
+
+.logo--light {
+  fill: $color-san-juan;
+}

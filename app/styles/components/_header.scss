@@ -1,0 +1,27 @@
+.header {
+  @include span(full);
+  margin-top: gutter();
+  margin-bottom: gutter();
+  min-height: 100px;
+
+  @include medium {
+    @include span(full);
+    margin-top: gutter();
+    margin-bottom: gutter();
+    min-height: 150px;
+  }
+
+  @include wide {
+    @include span(full);
+    margin-top: gutter();
+    margin-bottom: gutter();
+    min-height: 200px;
+  }
+
+  @include huge {
+    @include span(full);
+    margin-top: gutter();
+    margin-bottom: gutter();
+    min-height: 200px;
+  }
+}
