@@ -1,0 +1,23 @@
+.lead {
+  @include span(1.75 break);
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.25em;
+  font-style: italic;
+  font-weight: 300;
+  color: $color-elephant;
+
+  @include medium {
+    @include span(first 3.5 break);
+    font-size: 1.5em;
+  }
+
+  @include wide {
+    @include span(4 break);
+    font-size: 1.5em;
+  }
+
+  @include huge {
+    @include span(5 break);
+    font-size: 1.75em;
+  }
+}

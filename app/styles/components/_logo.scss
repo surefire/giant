@@ -2,15 +2,15 @@
   @include span(1);
 
   @include medium {
-    @include span(1.5)
+    @include span(first 1.5)
   }
 
   @include wide {
-    @include span(1.5);
+    @include span(first 1.5);
   }
 
   @include huge {
-    @include span(1.5);
+    @include span(first 1.5);
   }
 }
 
