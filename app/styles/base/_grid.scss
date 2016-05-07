@@ -1,33 +1,40 @@
 $base-line-height: 10px;
 
-$breakpoint-small: 520px !default;
-$breakpoint-medium: 768px !default;
-$breakpoint-wide: 1024px !default;
-$breakpoint-huge: 1200px !default;
-
-$container-small: 520px !default;
-$container-medium: 768px !default;
-$container-wide: 1024px !default;
-$container-huge: 1200px !default;
-
-$grid-small: 2 !default;
-$grid-medium: 4 !default;
-$grid-wide: 4 !default;
-$grid-huge: 5 !default;
-
-$layout-small: $container-small $grid-small;
-$layout-medium: $container-medium $grid-medium;
-$layout-wide: $container-wide $grid-wide;
-$layout-huge: $container-huge $grid-huge;
+$breakpoint-small: 375px;
+$breakpoint-medium: 667px;
+$breakpoint-wide: 1024px;
+$breakpoint-huge: 1200px;
 
 $susy: (
-  math: fluid,
+  math: static,
+  column-width: 180px,
+  gutters: (15px / 180px),
   gutter-position: before,
-  columns: $grid-small,
-  gutters: .075,
   debug: (
     image: false
   )
+);
+
+$layout-small: (
+  columns: 2
+);
+
+$layout-medium: (
+  columns: 4,
+  column-width: 150px,
+  gutters: (15px / 150px)
+);
+
+$layout-wide: (
+  columns: 4,
+  column-width: 230px,
+  gutters: (20px / 230px)
+);
+
+$layout-huge: (
+  columns: 5,
+  column-width: 220px,
+  gutters: (20px / 220px)
 );
 
 @mixin medium {

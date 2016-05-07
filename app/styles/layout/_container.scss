@@ -1,15 +1,15 @@
 .container {
-  @include container($container-small);
+  @include container($layout-small);
 
   @include medium {
-    @include container($container-medium);
+    @include container($layout-medium);
   }
 
   @include wide {
-    @include container($container-wide);
+    @include container($layout-wide);
   }
 
   @include huge {
-    @include container($container-huge);
+    @include container($layout-huge);
   }
 }
