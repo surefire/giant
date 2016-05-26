@@ -1,0 +1,55 @@
+.contact {
+  margin: 0;
+
+  @include span(last 0.75);
+
+  @include medium {
+    @include span(last 1)
+  }
+
+  @include wide {
+    @include span(last 1);
+  }
+
+  @include huge {
+    @include span(last 1);
+  }
+}
+
+.contact-link {
+  display: block;
+  margin: gutter() / 1.5 gutter() 0 auto;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background: $color-elephant;
+  color: $color-white;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 4em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include medium {
+    margin-right: 0;
+    font-size: 1em;
+  }
+
+  @include wide {
+    margin-top: gutter();
+    margin-right: 0;
+    font-size: 1.5em;
+  }
+
+  @include huge {
+    margin-top: gutter();
+    margin-right: 0;
+    font-size: 1.5em;
+  }
+
+  &:hover {
+    background-color: $color-san-juan;
+  }
+}
