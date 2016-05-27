@@ -1,5 +1,5 @@
 .portfolio-slice {
-  min-height: 300px;
+  height: 245px;
   margin-bottom: gutter();
 }
 
@@ -72,18 +72,15 @@
 .portfolio-slice-c1 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   $context: last 1;
   @include span($context);
 
   @include nested($context) {
     .portfolio-item {
-      flex: 1;
+      height: 115px;
       background-color: $color-scooter;
-    }
-
-    .portfolio-item-a {
-      margin-bottom: gutter();
     }
   }
 }
@@ -91,18 +88,18 @@
 .portfolio-slice-c2 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   $context: last 1;
   @include span($context);
 
   @include nested($context) {
     .portfolio-item {
-      flex: 1;
+      height: 115px;
     }
 
     .portfolio-item-a {
       background-color: $color-firefly;
-      margin-bottom: gutter();
     }
 
     .portfolio-item-b {
@@ -114,18 +111,18 @@
 .portfolio-slice-c3 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   $context: first 1;
   @include span($context);
 
   @include nested($context) {
     .portfolio-item {
-      flex: 1;
+      height: 115px;
     }
 
     .portfolio-item-a {
       background-color: $color-scooter;
-      margin-bottom: gutter();
     }
 
     .portfolio-item-b {
@@ -137,18 +134,18 @@
 .portfolio-slice-c4 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   $context: first 1;
   @include span($context);
 
   @include nested($context) {
     .portfolio-item {
-      flex: 1;
+      height: 115px;
     }
 
     .portfolio-item-a {
       background-color: $color-scooter;
-      margin-bottom: gutter();
     }
 
     .portfolio-item-b {
@@ -159,6 +156,7 @@
 
 @include medium {
   .portfolio-slice {
+    height: 204px;
     margin-bottom: gutter();
   }
 
@@ -207,38 +205,41 @@
   }
 
   .portfolio-slice-c1 {
-    $context: last 1;
-    @include span($context);
+    @include span(last 1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 96px;
     }
   }
 
   .portfolio-slice-c2 {
-    $context: 1;
-    @include span($context);
+    @include span(1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 96px;
     }
   }
 
   .portfolio-slice-c3 {
     @include span(first 1);
+
+    .portfolio-item {
+      height: 96px;
+    }
   }
 
   .portfolio-slice-c4 {
     @include span(1);
+
+    .portfolio-item {
+      height: 96px;
+    }
   }
 }
 
 @include wide {
   .portfolio-slice {
+    height: 313px;
     margin-bottom: gutter();
   }
 
@@ -287,52 +288,41 @@
   }
 
   .portfolio-slice-c1 {
-    $context: last 1;
-    @include span($context);
+    @include span(last 1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 147px;
     }
   }
 
   .portfolio-slice-c2 {
-    $context: 1;
-    @include span($context);
+    @include span(1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 147px;
     }
   }
 
   .portfolio-slice-c3 {
-    $context: first 1;
-    @include span($context);
+    @include span(first 1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 147px;
     }
   }
 
   .portfolio-slice-c4 {
-    $context: 1;
-    @include span($context);
+    @include span(1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 147px;
     }
   }
 }
 
 @include huge {
   .portfolio-slice {
+    height: 300px;
     margin-bottom: gutter();
   }
 
@@ -381,46 +371,34 @@
   }
 
   .portfolio-slice-c1 {
-    $context: 1;
-    @include span($context);
+    @include span(1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 141px;
     }
   }
 
   .portfolio-slice-c2 {
-    $context: first 1;
-    @include span($context);
+    @include span(first 1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 141px;
     }
   }
 
   .portfolio-slice-c3 {
-    $context: 1;
-    @include span($context);
+    @include span(1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 141px;
     }
   }
 
   .portfolio-slice-c4 {
-    $context: last 1;
-    @include span($context);
+    @include span(last 1);
 
-    @include nested($context) {
-      .portfolio-item-a {
-        margin-bottom: gutter();
-      }
+    .portfolio-item {
+      height: 141px;
     }
   }
 }
